@@ -75,46 +75,39 @@ struct json {
 							latitude_as_string[x] = line[j]; 
 							x++; j++; 
 						} 
-
 						j--; 
-            latitude_as_string[x] = '\0'; 
+            					latitude_as_string[x] = '\0'; 
 					} 
 					 
 				  else if (f == 13) { 
 						j++; 
-
 						while (line[j] != '"') { 
 							longitude_as_string[y] = line[j]; 
 							y++; j++; 
 						} 
-
 						j--;
-            longitude_as_string[y] = '\0'; 
+            					longitude_as_string[y] = '\0'; 
 					} 
 					 
 					if (fi == 2) { 
 						j += 2; 
-
 						while (line[j] != ',') { 
 							id_as_string[m] = line[j]; 
 							m++; j++; 
 						} 
-
 						j--; 
-            id_as_string[m] = '\0'; 
+            					id_as_string[m] = '\0'; 
 						fi++; 
 					} 
 					
 				  else if (fi == 4) { 
 						j += 2; 
-
 						while (line[j] != ',') { 
 							name[n] = line[j]; 
 							n++; j++; 
 						} 
-
 						j--; 
-            name[n] = '\0'; 
+            					name[n] = '\0'; 
 						fi++; f += 2; 
 					} 
 				} 
