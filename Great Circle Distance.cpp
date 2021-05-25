@@ -37,16 +37,11 @@ double distanceEarth(double lat2d, double lon2d) {
 
 // Structure which contains data and functions for accessing and processing data from the given customers.json file. 
 struct json { 
-	long long int length, i, j, x, y, m, 
-				n, f, fi, id[100000]; 
-	
-	char latitude_as_string[1000], 
-		longitude_as_string[1000], 
-		id_as_string[1000], name[1000]; 
-	
+	long long int length, i, j, x, y, m, n, f, fi, id[100000]; 
+	char latitude_as_string[1000], longitude_as_string[1000], id_as_string[1000], name[1000]; 
 	double lat2d, lon2d; 
-  
 	string line; 
+	
 	void distance_calculator() { 
 		if (distanceEarth(lat2d, lon2d) <= 50.0000) { 
 			id[i] = atoll(id_as_string); 
